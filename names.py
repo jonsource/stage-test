@@ -1,19 +1,31 @@
 #! /usr/bin/python
-# coding: utf-8
 
-print "Jména lektorů kurzu:"
+import os.path
+
+print "Jmena lektoru kurzu:"
 
 lecturers = [
 	"Honza",
 	"Vlasta",
 	"Bizi",
-	"Míra"
+	"Mira"
 	]
 
 for name in lecturers:
 	print name
 
-print "\nJména účastníků kurzu:"
-print "Eva"
-print "Pavel"
-print "Franta"
+print "\nJmena ucastniku kurzu:"
+
+students = [
+	"Eva",
+	"Pavel",
+	"Frantisek"
+	]
+
+for name in students:
+	print name
+	filename = name.lower() + ".txt"
+	if os.path.isfile(filename):
+		with open(filename, 'r') as content_file:
+		    content = content_file.read()
+		print content
