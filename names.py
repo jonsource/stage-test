@@ -15,3 +15,5 @@ for name in lecturers:
 
 print "\nJména účastníků kurzu:"
 print "Eva"
+print "Pavel"
+print "Franta"
